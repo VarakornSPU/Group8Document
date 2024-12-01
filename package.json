@@ -6,7 +6,7 @@
   "homepage": "https://varakornspu.github.io/Group8Document/",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
