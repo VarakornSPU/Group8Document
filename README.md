@@ -1,7 +1,6 @@
 Website : [https://varakornspu.github.io/Group8Document/](https://varakornspu.github.io/Group8Document/) <br>
 
-Username Password ที่แนะนำ (user นี้สามารถทำได้ทุกอย่าง)<br><br>
-
+Username Password ที่แนะนำ (user นี้สามารถทำได้ทุกอย่าง)<br>
 Username: Team <br>
 Password: 1234 <br>
 
