@@ -1,0 +1,363 @@
+/* .login-page for entire page styling */
+.login-page {
+  font-family: 'Prompt', sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  opacity: 0;
+  animation: zoomIn 1s ease-out forwards; /* Zoom-in effect */
+}
+
+/* Zoom-in animation for login-page */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95); /* Start slightly smaller */
+  }
+  to {
+    opacity: 1;
+    transform: scale(1); /* End at normal size */
+  }
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  height: 80%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  transform: scale(0.95); /* Initial scale */
+  animation: zoomInContainer 1s ease-out forwards; /* Zoom-in effect for container */
+}
+
+/* Zoom-in animation for the container */
+@keyframes zoomInContainer {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.login-form {
+  flex: 1;
+  padding: 2rem;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  background-position: top 50px left 30px;
+  justify-content: center;
+  align-items: left;  /* จัดให้อยู่กลาง */
+  background: url("./NewLogo.png") no-repeat;
+  background-size: 300px 70px;  /* กำหนดขนาดของโลโก้ */
+  background-position: top 2rem left 10rem;  /* ตำแหน่งของโลโก้ */
+  animation: zoomInForm 1s ease-out forwards; /* Zoom-in effect for form */
+  margin-top: 3rem;
+}
+
+/* Zoom-in animation for the form */
+@keyframes zoomInForm {
+  from {
+    opacity: 0;
+    transform: scale(0.9); /* Start slightly smaller */
+  }
+  to {
+    opacity: 1;
+    transform: scale(1); /* End at normal size */
+  }
+}
+
+.login-form__title {
+  margin-top: 100px;
+  animation: zoomInTitle 1s ease-out forwards; /* Zoom-in effect for title */
+}
+
+/* Zoom-in animation for the title */
+@keyframes zoomInTitle {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.logo {
+  height: 70px;
+  margin-bottom: 3rem;
+}
+
+.login-form h2 {
+  color: #333;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+}
+
+.login-form__label {
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 1rem;
+  margin-bottom: rem;
+}
+
+/* Styling for input fields */
+.login-form__input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: zoomInInput 1s ease-out forwards; /* Zoom-in effect for inputs */
+  animation-delay: 0.5s;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Zoom-in animation for the input fields */
+@keyframes zoomInInput {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Hover effect for input fields */
+.login-form__input:hover {
+  border-color: #ff5722; /* Change border color on hover */
+  box-shadow: 0 0 5px rgba(255, 87, 34, 0.3); /* Add subtle glow effect */
+}
+
+/* Focus effect for input fields */
+.login-form__input:focus {
+  outline: none;
+  border-color: #FF4D02;
+  box-shadow: 0 0 5px rgba(255, 77, 2, 0.3);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Styling for the login button */
+.login-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #f14d31;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  opacity: 0;
+  animation: zoomInButton 1s ease-out forwards;
+  animation-delay: 1s;
+  width: 100%;
+  margin-top: 16px;
+}
+
+/* Zoom-in animation for the button */
+@keyframes zoomInButton {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Hover effect for the login button */
+.login-button:hover {
+  background-color: #9b321f;
+  transform: scale(1.05);
+}
+
+.login-button:active {
+  background-color: #9b321f;
+  transform: scale(0.98);
+}
+
+/* Forgot password styling */
+.forgot-password {
+  display: block;
+  margin-top: 1.5rem;
+  color: #ff5722;
+  font-size: 0.9rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.forgot-password:hover {
+  color: #9b321f; /* Change text color to black */
+  transform: scale(1.05); /* Slightly enlarge the text */
+  width: 40%; /* Adjust width to match guest-login button */
+  margin: 0 auto; /* Center align the text */
+  margin-top: 1.5rem;
+}
+
+/* Styling for the OR text */
+.or {
+  text-align: center;
+  margin: 1rem 0;
+  color: #999;
+}
+
+/* Styling for the guest-login button */
+.guest-login {
+  color: #ff5722;
+  font-size: 0.9rem;
+  text-align: center;
+  background-color: white;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 40%;
+  margin: 0 auto; /* ทำให้อยู่ตรงกลาง */
+}
+
+.guest-login:hover {
+  color: #9b321f;
+  transform: scale(1.05); /* Slightly enlarge button */
+  width: 40%;
+  margin: 0 auto; /* ทำให้อยู่ตรงกลาง */
+}
+
+/* Background styling */
+.login-bg {
+  flex: 1;
+  background: url("./BG.jpg") no-repeat center center;
+  background-size: cover;
+  opacity: 0;
+  animation: zoomInBackground 1s ease-out forwards; /* Zoom-in effect for background */
+}
+
+/* Zoom-in animation for the background */
+@keyframes zoomInBackground {
+  from {
+    opacity: 0;
+    transform: scale(1.1); /* Start larger */
+  }
+  to {
+    opacity: 1;
+    transform: scale(1); /* End at normal size */
+  }
+}
+
+/* Password container styling */
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input {
+  flex: 1;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #999;
+  transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+  color: #ff5722;
+}
+
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.error-message i {
+  font-size: 1.2rem;
+}
+
+.input-error {
+  border: 1px solid #d32f2f; /* สีแดงสำหรับข้อผิดพลาด */
+  box-shadow: 0 0 2px rgba(230, 42, 42, 0.5); /* เงาสีแดงเมื่อ focus */
+}
+
+.input-error:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(211, 47, 47, 0.5); /* เงาสีแดงเมื่อ focus */
+}
+
+/* ข้อความข้อผิดพลาดใต้กล่องรหัสผ่าน */
+.error-message-password {
+  color: #d32f2f; /* สีแดงสำหรับข้อความข้อผิดพลาด */
+  font-size: 0.85rem; /* ขนาดข้อความเล็กกว่าปกติ */
+  margin-top: 5px; /* ระยะห่างระหว่างข้อความกับ input */
+  display: flex; /* จัดไอคอนและข้อความในแนวเดียวกัน */
+  align-items: center; /* จัดให้ไอคอนและข้อความอยู่ในแนวเดียวกัน */
+  gap: 5px; /* ระยะห่างระหว่างไอคอนกับข้อความ */
+  animation: fadeInError 0.3s ease-in-out; /* แอนิเมชันสำหรับการปรากฏ */
+}
+
+/* Label color when there's an input error */
+.error-label {
+  color: #d32f2f; /* สีแดง */
+  font-weight:  bolder;
+  transition: color 0.3s ease;
+}
+
+/* Existing input error styling */
+.input-error {
+  border: 1px solid #d32f2f;
+  box-shadow: 0 0 2px rgba(230, 42, 42, 0.5);
+}
+
+.input-error:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(211, 47, 47, 0.5);
+}
+
+
+
+/* เพิ่มแอนิเมชันสำหรับข้อความข้อผิดพลาด */
+@keyframes fadeInError {
+  from {
+    opacity: 0; /* เริ่มต้นแบบโปร่งใส */
+    transform: translateY(-5px); /* เริ่มต้นเลื่อนขึ้น */
+  }
+  to {
+    opacity: 1; /* แสดงข้อความชัดเจน */
+    transform: translateY(0); /* ตำแหน่งปกติ */
+  }
+}
+
+/* ไอคอนในข้อความข้อผิดพลาด */
+.error-message-password i {
+  font-size: 1rem; /* ขนาดไอคอน */
+  color: #d32f2f; /* สีเดียวกับข้อความข้อผิดพลาด */
+}

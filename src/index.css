@@ -1,0 +1,12 @@
+/* ปรับแต่งการแสดงผลของ Sidebar */
+.sidebar ul {
+  padding: 0px !important;
+}
+
+.sidebar ul li {
+  background-color: inherit;
+}
+/* 
+.sidebar ul li:hover {
+  background-color: orange;
+} */

@@ -1,0 +1,510 @@
+@import url("https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css");
+
+/* Main container styles */
+.home-container {
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Document title */
+.title-doc {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Search bar styling */
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 32px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.search-input:focus,
+.search-input:hover {
+  outline: none;
+  border-color: #ff4d02;
+  box-shadow: 0 0 5px rgba(255, 77, 2, 0.3);
+}
+
+/* Table styling */
+.document-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.document-table th,
+.document-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.document-table th {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.document-table thead th {
+  background-color: #fadec5;
+  color: black;
+}
+
+.document-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Preview Modal */
+.preview-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  height: 80%;
+  position: relative;
+  max-width: 1000px !important;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.preview-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Guest section */
+.guest-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 10px;
+  background-color: #f14d31;
+  overflow-y: auto;
+  margin: 0;
+  box-sizing: border-box;
+  margin-left: -250px;
+}
+
+.guest-home .main-content {
+  width: 100%;
+  max-width: 2000px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.guest-home .title-doc {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.guest-home .search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.page-button {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.page-space {
+  margin: 0 0.5rem;
+}
+
+.logo {
+  position: absolute;
+  top: 20px; /* Adjust the top value as needed */
+  left: 40px; /* Adjust the left value as needed */
+  width: 15rem;
+  height: auto; /* Optional: Maintain aspect ratio */
+}
+
+.back-to-login-btn {
+  background-color: white; /* You can change the color */
+  color: #FF4D02;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #FF4D02;
+  border-radius: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 40px;
+  z-index: 1000; /* Ensure it's on top of other content */
+}
+.back-to-login-btn:hover {
+  background-color: #f0a787; /* Darker shade for hover effect */
+  color: white;
+}
+
+.bp {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.bp-outline-og {
+  background-color: #f14d31;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bp-outline-og:hover {
+  background-color: #e05500;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.bp-outline-og:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.bp-outline-og:active {
+  background-color: #e05500;
+  transform: scale(0.95);
+}
+
+.filter-label {
+  margin-right: 0.5rem;
+}
+.filter-labels {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.items-per-page {
+  float: right;
+}
+
+.dropdown {
+  text-align: center;
+}
+
+.sort-dropdown {
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+  border-color: #ddd;
+}
+
+.sort-dropdown:hover,
+.sort-dropdown:focus {
+  border-color: #ff4d02;
+  box-shadow: 0 0 5px rgba(255, 77, 2, 0.3);
+}
+
+.table-header thead {
+  background-color: #ff4d02;
+}
+
+.document-table tbody tr:hover {
+  background-color: #fff7f0;
+}
+
+/* ปุ่มเลือกหลายรายการ */
+.toggle-checkbox-btn {
+  background-color: #f14d31;
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.toggle-checkbox-btn:hover {
+  background-color: #c22d13;
+  transform: translateY(-3px);
+}
+
+.toggle-checkbox-btn:active {
+  background-color: #f77d68;
+  transform: translateY(0);
+}
+
+.download-selected-btn {
+  background-color: #f14d31;
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.download-selected-btn:hover {
+  background-color: #c22d13;
+  transform: translateY(-3px);
+}
+
+.download-selected-btn:active {
+  background-color: #f77d68;
+  transform: translateY(0);
+}
+
+.toggle-checkbox-btn:active {
+  background-color: #f77d68;
+  transform: translateY(0);
+}
+
+/* กำหนดสไตล์ให้กับ checkbox แบบกลม */
+.checkbox-round {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; /* ทำให้กลม */
+  border: 2px solid #f14d31; /* กำหนดสีขอบ */
+  background-color: white;
+  cursor: pointer;
+  appearance: none; /* ทำให้ไม่มีการตกแต่งเริ่มต้น */
+  outline: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* สไตล์เมื่อมีการเลือก checkbox */
+.checkbox-round:checked {
+  background-color: white; /* สีเมื่อถูกเลือก */
+  border-color: #f14d31;
+}
+
+/* รูปสัญลักษณ์ถูกเลือกภายใน checkbox */
+.checkbox-round:checked::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f14d31; /* ทำให้มีจุดกลมๆ ภายใน */
+}
+
+.download-link {
+  background-color: #f14d31; /* Green background */
+  color: white !important; /* White text */
+  font-size: 14px; /* Font size */
+  padding: 10px 20px; /* Padding */
+  border: none; /* Remove border */
+  border-radius: 25px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.download-link:hover {
+  background-color: #f14d31; /* Darker green on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.toggle-select-all-btn {
+  background-color: #f14d31;
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.toggle-select-all-btn:hover {
+  background-color: #c22d13;
+  transform: translateY(-3px);
+}
+
+.toggle-select-all-btn:active {
+  background-color: #f77d68;
+  transform: translateY(0);
+}
+
+/* เมื่อเลือกหลายรายการให้มีขอบมน */
+.document-table th.checkbox-th {
+  border-radius: 8px 0 0 0;
+}
+
+/* เมื่อดาวน์โหลดหลายรายการแล้วให้เอาขอบมนออก */
+.document-table th.checkbox-th.no-radius {
+  border-radius: 0 !important;
+}
+
+
+.alert-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
+}
+
+.close-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.close-button:hover {
+  background-color: #d32f2f;
+}
+
+.download-popup {
+  position: absolute;
+  right: 20px; /* ตำแหน่งด้านขวา */
+  min-width: 300px;
+  background-color: #f1f1f1;
+  color: green;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: bottom 0.3s ease, opacity 0.3s ease;
+  z-index: 1000;
+  opacity: 1;
+}
+
+.download-popup.hidden {
+  opacity: 0;
+}
+
+.download-popup span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+.download-popup .progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px; /* ความสูงของหลอด */
+  background-color: rgba(34, 139, 34, 0.5); /* สีหลอด */
+  animation: progress-animation 5s linear forwards; /* ใช้ keyframes */
+}
+
+@keyframes progress-animation {
+  from {
+    width: 100%; /* เริ่มต้นเต็มความยาว */
+  }
+  to {
+    width: 0%; /* จบที่ 0% */
+  }
+}

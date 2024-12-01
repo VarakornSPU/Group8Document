@@ -1,0 +1,271 @@
+/* Container */
+.step-tabs-container {
+  max-width: 700px;
+
+  margin: 5px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #ffffff; /* พื้นหลังขาว */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+}
+
+/* Tabs */
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 12px 0;
+  text-align: center;
+  border: 1px solid #ddd;
+  background-color: #e0e0e0; /* สีพื้นหลังเทาอ่อนเมื่อไม่ได้ active */
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tab-button.active {
+  background-color: #f14D31; /* สีส้มเมื่อ active */
+  color: #ffffff;
+  border-color: #f14D31;
+  transform: translateY(-2px); /* เน้นเมื่อ active */
+}
+
+.tab-button:hover:not(.active) {
+  background-color: #f4d6bdf3; /* สีเทาอ่อนเมื่อ hover แต่ไม่ active */
+}
+
+/* เพิ่มการแยกสีแท็บเมื่ออยู่ในสถานะ active */
+.tab-button:focus {
+  outline: none; /* ลบกรอบ focus แบบเดิม */
+}
+
+/* Tab Content */
+.tab-content {
+  padding: 15px;
+  border: 1px solid #ddd;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content h3 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Form Inputs */
+.tab-content label {
+  font-size: 16px;
+  color: #555;
+  margin-top: 15px;
+  display: block;
+  font-weight: 500;
+}
+
+.tab-content input[type="text"],
+.tab-content input[type="number"],
+.tab-content input[type="file"],
+.tab-content input[type="date"],
+.tab-content select,
+.tab-content textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.tab-content input[type="text"]:hover,
+.tab-content input[type="number"]:hover,
+.tab-content input[type="file"]:hover,
+.tab-content input[type="date"]:hover,
+.tab-content select:hover,
+.tab-content textarea:hover {
+  border-color: #f14D31; /* สีขอบเมื่อ hover */
+  
+  box-shadow: 0 0 5px rgba(241, 77, 49, 0.3); /* เงาเมื่อ hover */
+}
+
+
+.tab-content input:focus,
+.tab-content select:focus,
+.tab-content textarea:focus {
+  border-color: #f14D31; /* ขอบส้มเมื่อ focus */
+  box-shadow: 0 0 5px rgba(241, 77, 49, 0.5);
+  outline: none;
+}
+
+/* Buttons */
+.continue-button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f14D31; /* สีพื้นหลังส้ม */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.continue-button:hover {
+  background-color: #e14a1d; /* สีส้มเข้มเมื่อ hover */
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tabs {
+      flex-direction: column;
+      gap: 5px;
+  }
+
+  .tab-button {
+      padding: 10px;
+  }
+
+  .step-tabs-container {
+      padding: 10px;
+  }
+
+  .tab-content {
+      padding: 10px;
+  }
+}
+
+.form-group-horizontal {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+label {
+  font-size: 16px;
+  color: #555;
+  font-weight: 400;
+}
+
+.form-item input[type="date"] {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Textarea Styling */
+.tab-content textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  resize: vertical; /* อนุญาตให้ปรับขนาดในแนวตั้ง */
+  min-height: 5px;
+  max-height: 50px;
+}
+
+.tab-content textarea:focus {
+  border-color: #f14D31; /* ขอบส้มเมื่อ focus */
+  box-shadow: 0 0 5px rgba(241, 77, 49, 0.5);
+  outline: none;
+}
+
+/* Container สำหรับการอัปโหลดไฟล์ */
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+/* ป้าย label ของการอัปโหลด */
+.file-upload label {
+  font-size: 1rem;
+  font-weight: 400px;
+  margin-bottom: 0.5rem;
+  color: #f8f8f8;
+}
+
+/* ปุ่มเลือกไฟล์ */
+.file-upload-button {
+  width: 25%;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #a26a4a;
+  color: white;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.file-upload-button:hover {
+  background-color: #bb8057;
+  
+}
+
+.file-upload-button:active {
+  background-color: hsl(21, 84%, 45%);
+}
+
+/* Input แบบ file (ซ่อนเพื่อให้ใช้ label แทน) */
+.file-upload input[type="file"] {
+  display: none;
+}
+
+/* Input สำหรับแสดงชื่อไฟล์ */
+.file-upload-name {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  color: #333;
+  margin-top: 8px;
+  cursor: not-allowed;
+}
+
+/* เมื่อ focus ที่ช่องชื่อไฟล์ */
+.file-upload-name:focus {
+  outline: none;
+  border-color: f14d31; /* สีเขียวเมื่อโฟกัส */
+}
+
+.file-upload .file-upload-name::placeholder {
+  color: #888;
+}

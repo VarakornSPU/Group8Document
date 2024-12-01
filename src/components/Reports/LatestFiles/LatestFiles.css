@@ -1,0 +1,33 @@
+.latest-files-title {
+    color: black;
+    text-align: center;
+}
+.latest-files {
+    text-align: center;
+}
+.list-report-latestfiles {
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    text-align: center;
+}
+
+.button-see-more {
+    display: inline-flex; /* ใช้ inline-flex เพื่อให้จัดข้อความตรงกลางในกล่อง */
+    justify-content: center; /* จัดข้อความให้อยู่กลางแนวนอน */
+    align-items: center;
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 10px;
+    height: 35px;
+    margin: 10px;
+    border: 1px solid #BBBBBB;
+}
+.button-see-more:hover {
+    background-color: #F3F3F3;
+}
+
+.button-see-more:active {
+    background-color: #dadada;
+}

@@ -1,0 +1,47 @@
+#table-report {
+    width: 100%;
+    text-align: center;
+}
+
+tr {
+    height: 40px;
+};
+
+#title-report-table {
+    margin: 0;
+}
+
+.pagination-report {
+    text-align: center;
+}
+
+#span-pagination {
+    display: inline-flex; /* ใช้ inline-flex เพื่อให้จัดข้อความตรงกลางในกล่อง */
+    justify-content: center; /* จัดข้อความให้อยู่กลางแนวนอน */
+    align-items: center; /* จัดข้อความให้อยู่กลางแนวตั้ง */
+    margin: 0 10px;
+}
+
+.pagination-button-report {
+    display: inline-flex; /* ใช้ inline-flex เพื่อให้จัดข้อความตรงกลางในกล่อง */
+    justify-content: center; /* จัดข้อความให้อยู่กลางแนวนอน */
+    align-items: center;
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 10px;
+    height: 35px;
+    margin: 20px 10px 0 10px;
+    border: 1px solid transparent;
+}
+
+.pagination-button-report:hover {
+    border: 1px solid #BBBBBB;
+}
+
+.pagination-button-report:active {
+    background-color: #F3F3F3;
+}
+
+.border-bottom-document-report {
+    border-bottom: 1px solid #BBBBBB;
+}

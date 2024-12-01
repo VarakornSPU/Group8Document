@@ -1,0 +1,99 @@
+.slick-dots {
+  position: absolute;
+  bottom: 10px; /* วางให้ห่างจากด้านล่างของรูปภาพ */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 2;
+
+}
+
+.slick-dots li {
+  width: 20px; /* ความกว้างของขีด */
+  margin: 0 10px;
+}
+
+.slick-dots li button:before {
+  font-size: 16px;
+  color: #333; /* สีของขีดที่ไม่ได้ถูกเลือก */
+  opacity: 1;
+  content: "▔▔"; /* ใช้ขีดแทนจุด */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #fc5310; /* สีของขีดที่ถูกเลือก */
+}
+
+
+.aWholeContent {
+width: 100%;
+}
+
+
+.header {
+background-color: #bdbdbd;
+width: 100%;
+height: 300px;
+}
+
+.reports-header {
+width: 100%;
+position: "relative";
+height: "200px";
+}
+
+.flex1 {
+display: flex;
+justify-content: center;
+align-items: center;
+/* background-color: #dfdfdf; */
+width: 100%;
+height: 350px;
+}
+.flex2 {
+display: flex;
+justify-content: center;
+align-items: center;
+/* background-color: bisque; */
+width: 100%;
+height: 15rem;
+}
+
+.Document-section {
+/* background-color: #292020; */
+/* border: solid; */
+width: 60%;
+height: 80%;
+margin: 1rem 3rem;
+}
+
+.Document-type {
+/* background-color: #292020; */
+min-width: 250px;
+width: 20%;
+height: 80%;
+margin: 1rem 3rem;
+}
+
+.Document-Upload {
+/* background-color: #292020; */
+
+width: 40%;
+height: 80%;
+margin: 1rem 3rem;
+}
+
+.Document-Delete {
+/* background-color: #292020; */
+
+width: 40%;
+height: 80%;
+margin: 1rem 3rem;
+}
+
+.width100 {
+width: 100%;
+}

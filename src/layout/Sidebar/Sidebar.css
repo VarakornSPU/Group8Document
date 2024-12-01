@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  border: none;
+  list-style: none;
+}
+
+.sidebar {
+  color: white;
+  width: 25vh;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 5px;
+  transform: scale(0.04);
+}
+
+.logo-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #2B2B2B;
+}
+
+.menu-bar {
+  height: 88vh;
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adjust as needed for main item spacing */
+  font-size: 1rem;
+  position: relative;
+}
+
+/* Add spacing between each submenu item */
+

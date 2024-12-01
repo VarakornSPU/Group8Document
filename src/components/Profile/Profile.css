@@ -1,0 +1,214 @@
+/* General Profile Container */
+.profile {
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+}
+
+/* Header Styling */
+.profile__header {
+  font-size: 2.5rem;
+  color: #020202;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Avatar Section */
+.profile__avatar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;  /* Adjusted the margin for better spacing */
+}
+
+.profile__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #F14D31;
+}
+
+/* Profile Info Section */
+.profile__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 20px;  /* Adjusted margins to ensure consistency */
+  margin-left: 15rem;
+  margin-right: 15rem;
+  padding-left: 1rem;
+}
+
+/* Form Group */
+.profile__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile__form-group label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.profile__form-group input {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.profile__form-group input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.profile__form-group input[readonly] {
+  background-color: #f0f0f0;
+  color: #777;
+}
+
+/* New Style for First and Last Name (Same Line) */
+.profile__form-group--name {
+  display: flex;
+  gap: 3rem;  /* Adjust the space between the inputs */
+}
+
+.profile__form-group--name .profile__form-group {
+  flex: 1;  /* Ensure both fields take equal space */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile {
+    padding: 20px;
+    margin: 20px;
+    width: 100%;  /* Full width on small screens */
+    max-width: 100%;  /* Remove max-width to use full screen */
+  }
+
+  .profile__avatar-container {
+    margin-bottom: 1.5rem;
+  }
+
+  .profile__avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile__form-group input {
+    padding: 10px;
+  }
+
+  .profile__header {
+    font-size: 2rem;
+  }
+
+  /* Stack First Name and Last Name on Small Screens */
+  .profile__form-group--name {
+    flex-direction: column;  /* Stack them vertically on small screens */
+    gap: 10px;
+  }
+}
+
+/* Log Out Button Styling */
+.profile__logout-btn {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  color: white;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  width: 100%;  /* Full width on mobile for better accessibility */
+}
+
+.profile__logout-btn:hover {
+  background-color: #c0392b;
+}
+
+.dividermain {
+  border: #F14D31 2px solid;
+  width: 20%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+
+/* Profile Avatar Animation */
+.profile__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f39c12;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile__avatar:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Divider */
+.dividermain {
+  border: #F14D31 2px solid;
+  width: 20%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  transition: width 0.4s ease-in-out;
+}
+
+/* Smooth Input Hover */
+.profile__form-group input {
+  transition: all 0.3s ease;
+}
+
+.profile__form-group input:hover {
+  border-color: #FF4D02;
+  box-shadow: 0 0 5px rgba(255, 77, 2, 0.3);
+}
+.profile__form-group input:focus {
+  border-color: #FF4D02;
+  box-shadow: 0 0 5px rgba(255, 77, 2, 0.3);
+}
+
+
+
+/* ปุ่มเลือกภาพซ่อนอยู่ */
+#avatar-upload {
+  display: none;
+}
+
+/* สไตล์ภาพโปรไฟล์ */
+.profile__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #F14D31;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.profile__avatar:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ตัวห่อภาพ */
+.profile__avatar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}

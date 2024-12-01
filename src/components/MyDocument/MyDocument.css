@@ -1,0 +1,538 @@
+/* โครงร่างหน้าหลัก */
+.my-document-container {
+  padding: 20px;
+  background-color: #ffffff;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  position: relative;
+}
+
+/* หัวข้อ */
+.my-document-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ff6600;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ส่วนกรองข้อมูล */
+.filter-section {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Make sure filter options don't overflow */
+}
+
+.filter-button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+  background-color: #e05500;
+  transform: scale(1.05);
+}
+
+/* ตาราง */
+
+.document-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-height: 500px; /* กำหนดความสูงสูงสุดของตาราง */
+  position: relative;
+}
+
+.document-table th,
+.document-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.th-number {
+  border-radius: 8px 0  0 ;
+}
+
+.th-tool {
+  border-radius: 0 8px 0  0 ;
+}
+
+.document-table th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.document-table tbody tr:hover {
+  background-color: #fff7f0;
+}
+
+
+
+/* ไอคอนและลิงก์ในตาราง */
+.document-table td.document-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.document-table td a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.document-table td a:hover {
+  color: #f14d31;
+}
+
+.file-icon {
+  width: 32px;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* ปุ่มเพิ่มเติม */
+.more-options {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.more-options:hover {
+  color: #ff6600;
+}
+
+/* Modal Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background: white;
+  width: 80%;
+  height: 80%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.document-preview-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.close-preview-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.close-preview-btn:hover {
+  background: darkred;
+}
+
+/* Pagination Styling */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Pagination Buttons */
+.pagination-btn {
+  background-color:#F14D31;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pagination-btn:hover {
+  background-color: #e05500;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.pagination-btn:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.pagination-info {
+  font-size: 1rem;
+  color: #333;
+  margin: 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Pagination Button Active State */
+.pagination-btn:active {
+  background-color: #e05500;
+  transform: scale(0.95);
+}
+
+.download-btn {
+  background-color: #F14D31; /* Green background */
+  color: white; /* White text */
+  font-size: 14px; /* Font size */
+  padding: 10px 20px; /* Padding */
+  border: none; /* Remove border */
+  border-radius: 25px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.download-btn:hover {
+  background-color: #317433; /* Darker green on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.download-btn:disabled {
+  background-color: #ddd; /* Greyed out when disabled */
+  cursor: not-allowed; /* Disable cursor */
+  box-shadow: none; /* Remove shadow when disabled */
+}
+
+/* Adjusting for smaller screens */
+@media (max-width: 768px) {
+  .document-table th, .document-table td {
+    padding: 10px;
+  
+  }
+
+  .document-table td {
+    font-size: 0.9rem;
+  }
+
+  .modal-content {
+    width: 90%;
+    height: 90%;
+  }
+
+  .pagination-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .filter-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pagination-info {
+    font-size: 0.9rem;
+  }
+}
+
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px; /* เพิ่มช่องว่างระหว่างปุ่ม */
+}
+
+.download-btn,
+.delete-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.download-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+/* popup */
+/* Popup overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Popup content */
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  max-width: 90%;
+}
+
+/* Popup buttons */
+.popup-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.confirm-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #F14D31;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirm-btn:hover {
+  background-color: #07970c;
+}
+
+.cancel-btn:hover {
+  background-color: #9b321f;
+}
+
+.edit-btn {
+  border: none;
+  background-color: transparent;
+}
+
+/* Popup Overlay */
+.popup-overlay-edit {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Popup Content */
+.popup-content-edit {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 50rem;
+  max-width: 90%;
+  animation: scaleUp 0.3s ease-out;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Header */
+.popup-content-edit h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form Groups */
+.form-group {
+  display: flex; /* ใช้ flexbox เพื่อให้ label และ input อยู่ในบรรทัดเดียวกัน */
+  align-items: center; /* จัดแนวกลาง */
+  margin-bottom: 20px; /* ช่องว่างระหว่างฟอร์มกรุ๊ป */
+}
+
+.label-edit {
+  flex: 0 0 150px; /* กำหนดความกว้างของ label เป็น 150px */
+  font-weight: 500;
+  margin-bottom: 0; /* เอาช่องว่างระหว่าง label และ input */
+  color: #555;
+}
+
+.form-input {
+  flex: 1; /* ให้ input/select ขยายเต็มพื้นที่ที่เหลือ */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fafafa;
+  transition: border-color 0.3s;
+}
+
+.form-input:hover{
+  border-color: #F14D31 !important;
+  box-shadow: 0 0 5px rgba(241, 77, 49, 0.5); /* เพิ่มเงาเพื่อให้ชัดเจน */
+}
+
+.form-input:focus {
+  border-color: #F14D31 !important;
+  box-shadow: 0 0 5px rgba(241, 77, 49, 0.5); /* เพิ่มเงาเพื่อให้ชัดเจน */
+}
+
+.form-input:active {
+  border-color: #F14D31 !important;
+  box-shadow: 0 0 5px rgba(241, 77, 49, 0.5); /* เพิ่มเงาเพื่อให้ชัดเจน */
+}
+
+
+/* Adjust form button layout */
+.form-group {
+  display: flex;
+  justify-content: center;
+}
+
+/* Add spacing between inputs */
+.form-group input, .form-group select {
+  margin-bottom: 10px; /* ช่องว่างระหว่างช่องกรอก */
+}
+
+/* Popup Buttons */
+.popup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Popup Content Padding */
+.popup-content-edit {
+  padding: 30px;
+}
+
+/* Additional Spacing */
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.confirm-btn {
+  background-color: #F14D31; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding */
+  border: none; /* Remove border */
+  border-radius: 25px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-weight: 600;
+  font-size: 1rem;
+  margin-right: 12px;
+  width: auto;
+  max-width: 160px;
+}
+
+.confirm-btn:hover {
+  background-color: #F14D31; /* Darker green on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.cancel-btn {
+  background-color: #F14D31; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding */
+  border: none; /* Remove border */
+  border-radius: 25px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-weight: 600;
+  font-size: 1rem;
+  margin-right: 12px;
+  width: auto;
+  max-width: 160px;
+}
+
+.cancel-btn:hover {
+  background-color: #F14D31; /* Darker green on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
